@@ -6,7 +6,7 @@
             <button 
                 @click="openAddModal()" 
                 class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg shadow">
-                ➕ Tambah Kategori
+                 Tambah Kategori
             </button>
         </div>
 
@@ -37,7 +37,7 @@
                                 <button 
                                     @click="openEditModal({{ $item->id }}, '{{ $item->nama }}')"
                                     class="px-3 py-1 bg-yellow-500 hover:bg-yellow-600 text-white rounded shadow">
-                                    ✏️ Edit
+                                     Edit
                                 </button>
 
                                 <!-- Tombol Hapus -->
@@ -47,7 +47,7 @@
                                     <button type="submit"
                                         onclick="return confirm('Yakin ingin menghapus?')"
                                         class="px-3 py-1 bg-red-500 hover:bg-red-600 text-white rounded shadow">
-                                        🗑 Hapus
+                                         Hapus
                                     </button>
                                 </form>
                             </td>
@@ -67,7 +67,7 @@
             x-cloak 
             class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div class="bg-white w-full max-w-md p-6 rounded-lg shadow-lg" @click.away="modalOpen=false" x-transition>
-                <h2 class="text-xl font-semibold mb-4" x-text="editMode ? '✏️ Edit Kategori' : '➕ Tambah Kategori'"></h2>
+                <h2 class="text-xl font-semibold mb-4" x-text="editMode ? ' Edit Kategori' : ' Tambah Kategori'"></h2>
                 
                 <form :action="editMode ? updateUrl : storeUrl" method="POST">
                     @csrf
